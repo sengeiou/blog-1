@@ -5,7 +5,7 @@
     <div class="title">BLOG</div>
     <ul>
       <li>
-        <router-link to="/home">
+        <router-link to="/">
           <div class="icon"><font-awesome-icon icon="grip-horizontal" /></div>
           <div class="text">Home</div>
         </router-link>

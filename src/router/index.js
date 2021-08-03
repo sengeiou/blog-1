@@ -25,11 +25,11 @@ import Projects from "../components/gitbook/Projects";
 const routes = [
     {
         path: '/',
-        redirect: '/home',
+        //redirect: '/home',
         component: Home,
         children: [
             {
-                path: 'home',
+                path: '/',
                 component: SiteMap
             },
             {
