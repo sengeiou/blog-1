@@ -1,36 +1,38 @@
+<!-- 网站侧边栏UI相关 -->
+
 <template>
   <div class="sidebar">
     <div class="title">BLOG</div>
     <ul>
       <li>
-        <a href="#">
+        <router-link to="/home">
           <div class="icon"><font-awesome-icon icon="grip-horizontal" /></div>
-          <div class="text">Dashboard</div>
-        </a>
+          <div class="text">Home</div>
+        </router-link>
       </li>
       <li>
-        <a href="#">
+        <router-link to="/map">
           <div class="icon"><font-awesome-icon icon="sitemap" /></div>
           <div class="text">Map</div>
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="#">
+        <router-link to="/demo">
           <div class="icon"><font-awesome-icon icon="tasks" /></div>
           <div class="text">Projects</div>
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="#">
+        <router-link to="/user">
           <div class="icon"><font-awesome-icon icon="user" /></div>
           <div class="text">User</div>
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="#">
+        <router-link to="/setting">
           <div class="icon"><font-awesome-icon icon="cog" /></div>
           <div class="text">Setting</div>
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>
@@ -45,7 +47,7 @@ export default {
 <style scoped>
 .sidebar {
   position: absolute;
-  width: 250px;
+  width: 200px;
   height: 100vh;
   background-color: rgb(255, 255, 255);
   text-align: center;
@@ -75,7 +77,7 @@ ul {
 }
 .icon {
   display: inline-block;
-  width: 60px;
+  width: 50px;
   text-align: center;
 }
 .text {

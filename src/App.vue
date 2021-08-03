@@ -1,18 +1,11 @@
 <template>
-  <navbar></navbar>
-  <heading></heading>
+  <router-view></router-view>
 </template>
 
 <script>
-import Navbar from "./components/Navbar";
-import Heading from "./components/Heading";
 
 export default {
   name: 'App',
-  components: {
-    Navbar,
-    Heading
-  }
 }
 </script>
 
@@ -27,4 +20,5 @@ export default {
 body {
   background-color: rgb(248, 248, 248);
 }
+
 </style>
