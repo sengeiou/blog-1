@@ -1,13 +1,20 @@
 <template>
   <div class="container">
-    <a
-        target="_blank"
+    <div
+        class="title"
         v-for="(item, id) in data"
         :key="id"
-        :href="'https://app.gitbook.com/@wuchi/s' + item.url"
+        v-show="item.url"
     >
-      {{ item.title }}
-    </a>
+      <a
+          target="_blank"
+          v-for="(item, id) in data"
+          :key="id"
+          :href="'https://app.gitbook.com/@wuchi/s' + item.url"
+      >
+        {{ item.title }}
+      </a>
+    </div>
   </div>
 </template>
 
@@ -19,6 +26,9 @@ export default {
 </script>
 
 <style scoped>
+body {
+  background-color: rgb(238, 232, 234);
+}
 .container {
   margin: 30px 0px;
   display: grid;

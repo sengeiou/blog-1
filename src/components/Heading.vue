@@ -52,7 +52,7 @@ export default {
   border: none;
   outline: none;
   border-radius: 6px;
-  margin: 20px 0px 30px 40px;
+  margin: 40px 0px 30px 40px;
   height: 40px;
   padding: 10px 60px 10px 10px;
   font-size: 16px;
@@ -75,7 +75,7 @@ export default {
   font-size: 20px;
   height: 40px;
   line-height: 40px;
-  top: 20px;
+  top: 40px;
 }
 .search {
   right: 308px;
