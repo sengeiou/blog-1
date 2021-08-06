@@ -46,19 +46,15 @@ body {
 }
 .container a {
   width: 100%;
-  overflow: hidden;
   display: inline-block;
   text-decoration: none;
   color: black;
   background-color: rgba(0, 0, 0, 0.08);
   padding: 10px;
-  margin: 0 auto;
-  border-radius: 5px;
  /* box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);*/
 }
 .container a:hover {
   color: white;
   background-color: #0084ff;
-  border-radius: 5px;
 }
 </style>
