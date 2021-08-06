@@ -1,14 +1,15 @@
 <template>
   <div class="container">
     <div
-        class="title"
-        v-for="(item, id) in data"
-        :key="id"
-        v-show="item.url"
+        class="heading"
+        v-for="(value, key) in data"
+        :key="key"
+        :class="key"
     >
+      <div class="key">{{key}}</div>
       <a
           target="_blank"
-          v-for="(item, id) in data"
+          v-for="(item, id) in value"
           :key="id"
           :href="'https://app.gitbook.com/@wuchi/s' + item.url"
       >
@@ -27,25 +28,37 @@ export default {
 
 <style scoped>
 body {
-  background-color: rgb(238, 232, 234);
+  background-color: red;
 }
 .container {
-  margin: 30px 0px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 240px);
-  grid-auto-flow: row;
-  height: 100%;
-  justify-content: center;
+  padding: 30px;
+  column-count: 4;
+  column-gap: 0;
 }
-
+.heading {
+  width: 250px;
+  margin: 0 auto;
+}
+.key {
+  font-size: 18px;
+  text-align: center;
+  padding: 20px;
+}
 .container a {
+  width: 100%;
+  overflow: hidden;
   display: inline-block;
   text-decoration: none;
   color: black;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.08);
   padding: 10px;
-  margin: 10px;
+  margin: 0 auto;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
+ /* box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);*/
+}
+.container a:hover {
+  color: white;
+  background-color: #0084ff;
+  border-radius: 5px;
 }
 </style>

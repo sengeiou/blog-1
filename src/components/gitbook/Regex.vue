@@ -13,7 +13,7 @@ export default {
     GitBook
   },
   setup() {
-    const data = ref(GitBookJson['-1'])
+    const data = ref(GitBookJson['regex'])
     return { data }
   }
 }

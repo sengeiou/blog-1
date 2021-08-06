@@ -12,14 +12,6 @@
           </div>
           <div class="text">{{ texts[index] }}</div>
         </router-link>
-<!--        <a target="_blank" :href="'https://app.gitbook.com/@wuchi/s/' + http + '/'" v-for="(http, index) in https" :key="http">-->
-<!--          <div class="picture">-->
-<!--            <div class="container" :class="'container-' + http">-->
-<!--              <div class="icon" :class="'icon-' + http"></div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="text">{{ texts[index] }}</div>-->
-<!--        </a>-->
       </li>
     </ul>
   </div>
@@ -31,7 +23,7 @@ export default {
   name: "SiteMap",
   setup() {
     const RouterLink = ref(['regex', 'git', 'html', 'javascript', 'linux', 'mysql', 'notebook', 'php', 'projects', 'vue'])
-    const https = ref(['-1', 'git', 'html-css', 'javascript', 'linux', 'mysql', 'notebook', 'php', 'projects', 'vue'])
+    const https = ref(['regex', 'git', 'html-css', 'javascript', 'linux', 'mysql', 'notebook', 'php', 'projects', 'vue'])
     const texts = ref(['正则表达式', 'Git', 'HTML/CSS', 'JavaScript', 'Linux', 'MySQL', 'NoteBook', 'PHP', 'Projects', 'Vue'])
     return {https, texts, RouterLink}
   }
@@ -92,7 +84,7 @@ ul {
   transform: scale(0.75);
 }
 
-.icon--1 { background-position: -1558px 0; }
+.icon-regex { background-position: -1558px 0; }
 .icon-git { background-position: -2419px 0; }
 .icon-html-css { background-position: -1968px 0; }
 .icon-javascript { background-position: -1640px 0; }
@@ -103,7 +95,7 @@ ul {
 .icon-projects { background-position: -1599px 0; }
 .icon-vue { background-position: -2460px 0; }
 
-.container--1 { background-color: rgb(38, 203, 124); }
+.container-regex { background-color: rgb(38, 203, 124); }
 .container-git { background-color: rgb(38, 203, 124); }
 .container-html-css { background-color: rgb(247, 125, 5); }
 .container-javascript { background-color: rgb(3, 209, 235); }
