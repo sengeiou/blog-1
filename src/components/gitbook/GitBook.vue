@@ -45,8 +45,9 @@ export default {
   display: inline-block;
   text-decoration: none;
   color: black;
-  background-color: rgb(249, 251, 253);
+  background-color: rgb(231, 234, 237);
   padding: 10px 10px 10px 20px;
+
 }
 .container a:hover {
   color: white;
