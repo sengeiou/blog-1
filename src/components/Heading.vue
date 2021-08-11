@@ -56,6 +56,7 @@ export default {
   height: 40px;
   padding: 10px 60px 10px 10px;
   font-size: 16px;
+  box-shadow: 0px 0px 80px 40px rgba(0, 0, 0, 0.03);
 }
 .content {
   display: inline-block;

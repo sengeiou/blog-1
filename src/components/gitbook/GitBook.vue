@@ -27,9 +27,6 @@ export default {
 </script>
 
 <style scoped>
-body {
-  background-color: red;
-}
 .container {
   padding: 30px;
   column-count: 4;
@@ -41,20 +38,19 @@ body {
 }
 .key {
   font-size: 18px;
-  text-align: center;
-  padding: 20px;
+  padding: 20px 0px 20px 40px;
 }
 .container a {
   width: 100%;
   display: inline-block;
   text-decoration: none;
   color: black;
-  background-color: rgba(0, 0, 0, 0.08);
-  padding: 10px;
- /* box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);*/
+  background-color: rgb(249, 251, 253);
+  padding: 10px 10px 10px 20px;
 }
 .container a:hover {
   color: white;
   background-color: #0084ff;
+  border-radius: 5px;
 }
 </style>
