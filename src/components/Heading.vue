@@ -11,7 +11,11 @@
     >
     <div class="content">Hello, Ichwu</div>
     <div class="icon search" @click="jump"><font-awesome-icon icon="search" /></div>
-    <button @click="show = !show"><div class="icon user"><font-awesome-icon icon="user" /></div></button>
+    <div @click="show = !show">
+      <div class="icon user">
+        <font-awesome-icon icon="user" />
+      </div>
+    </div>
     <div class="card" v-if="show"></div>
   </div>
 </template>
