@@ -1,5 +1,4 @@
 <!-- gitbook 映射 -->
-
 <template>
   <div class="site">
     <ul>
@@ -31,9 +30,6 @@ export default {
 </script>
 
 <style scoped>
-.site {
-  /*height: 709px;*/
-}
 a {
   text-decoration: none;
   display: inline-block;
@@ -53,17 +49,17 @@ ul {
 }
 .picture {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 .text {
-  display: inline-block;
-  font-size: 16px;
+  width: 90px;
   height: 40px;
   line-height: 40px;
+  display: inline-block;
+  font-size: 16px;
   padding-left: 10px;
-  width: 90px;
+  vertical-align: middle;
 }
-
 .container {
   width: 40px;
   height: 40px;

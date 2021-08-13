@@ -23,12 +23,6 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/user">
-          <div class="icon"><font-awesome-icon icon="user" /></div>
-          <div class="text">User</div>
-        </router-link>
-      </li>
-      <li>
         <router-link to="/setting">
           <div class="icon"><font-awesome-icon icon="cog" /></div>
           <div class="text">Setting</div>
@@ -45,17 +39,21 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 415px) {
+  .sidebar {
+    display: none;
+  }
+}
 .sidebar {
-  position: absolute;
-  width: 200px;
   height: 100vh;
   background-color: rgb(255, 255, 255);
   text-align: center;
 }
 .title {
+  width: 200px;
   font-size: 28px;
   font-weight: bold;
-  padding: 40px 20px 40px 0px;
+  padding: 40px 0px 40px 0px;
   color: rgb(29, 129, 226);
 }
 ul {
@@ -83,5 +81,4 @@ ul {
 .text {
   display: inline-block;
 }
-
 </style>

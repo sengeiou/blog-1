@@ -1,13 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router"
 
-import Home from "../components/Home";
+import Home from "../components/home/Home";
 
-// home
-import SiteMap from "../components/home/SiteMap";
-import Map from "../components/home/Map";
-import Demo from "../components/home/Demo";
-import User from "../components/home/User";
-import Setting from "../components/home/Setting";
+// navbar
+import SiteMap from "../components/navbar/SiteMap";
+import Map from "../components/navbar/Map";
+import Setting from "../components/navbar/Setting";
 
 // gitbook
 import Regex from "../components/gitbook/Regex";
@@ -25,7 +23,7 @@ import Projects from "../components/gitbook/Projects";
 const routes = [
     {
         path: '/',
-        //redirect: '/home',
+        //redirect: '/navbar',
         component: Home,
         children: [
             {
@@ -38,11 +36,7 @@ const routes = [
             },
             {
                 path: 'demo',
-                component: Demo
-            },
-            {
-                path: 'user',
-                component: User
+                redirect: 'projects',
             },
             {
                 path: 'setting',
