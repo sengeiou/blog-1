@@ -36,7 +36,7 @@
 import { ref } from "vue"
 
 export default {
-  name: "Heading",
+  name: "Header",
   setup() {
     function jump() {
       let searchval = document.getElementById('search').value;

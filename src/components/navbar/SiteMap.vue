@@ -23,7 +23,7 @@ export default {
   setup() {
     const RouterLink = ref(['regex', 'git', 'html', 'javascript', 'linux', 'mysql', 'notebook', 'php', 'projects', 'vue'])
     const https = ref(['regex', 'git', 'html-css', 'javascript', 'linux', 'mysql', 'notebook', 'php', 'projects', 'vue'])
-    const texts = ref(['正则表达式', 'Git', 'HTML/CSS', 'JavaScript', 'Linux', 'MySQL', 'NoteBook', 'PHP', 'Projects', 'Vue'])
+    const texts = ref(['正则表达式', 'Git', 'HTML/CSS', 'JavaScript', 'Linux', 'Database', 'NoteBook', 'PHP', 'Projects', 'Vue'])
     return {https, texts, RouterLink}
   }
 }

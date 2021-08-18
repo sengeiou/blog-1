@@ -1,22 +1,22 @@
 <template>
   <div class="container">
-    <navbar></navbar>
+    <m-navbar></m-navbar>
     <div class="content">
-      <heading></heading>
+      <m-header></m-header>
       <router-view class="flex-item"></router-view>
     </div>
   </div>
 </template>
 
 <script>
-import Heading from "../header/Heading";
+import Header from "../header/Header";
 import Navbar from "../navbar/Navbar";
 
 export default {
   name: "Home",
   components: {
-      Heading,
-      Navbar,
+      "m-header": Header,
+      "m-navbar": Navbar,
   },
 }
 </script>
