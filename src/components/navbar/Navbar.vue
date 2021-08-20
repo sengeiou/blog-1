@@ -17,12 +17,6 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/demo">
-          <div class="icon"><font-awesome-icon icon="tasks" /></div>
-          <div class="text">Projects</div>
-        </router-link>
-      </li>
-      <li>
         <router-link to="/setting">
           <div class="icon"><font-awesome-icon icon="cog" /></div>
           <div class="text">Setting</div>

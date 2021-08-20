@@ -9,10 +9,9 @@
         type="text"
         placeholder=" Google Search"
         @keydown.enter="jump"
-        onfocusout="this.value = ''"
     >
     <div class="container">
-      <div class="icon search" @click="jump"><font-awesome-icon icon="search" /></div>
+      <div class="icon search"><font-awesome-icon icon="search" @click="jump"/></div>
       <a class="link link-bilibili" href="https://www.bilibili.com/" target="_blank"><img class="web bilibili" src="https://www.bilibili.com/favicon.ico?v=1" alt="bilibili"></a>
       <a class="link link-github" href="https://github.com/" target="_blank"><img class="web github" src="https://github.githubassets.com/favicons/favicon.svg" alt="github"></a>
       <div class="text content">Hello, Ichwu</div>
@@ -38,17 +37,15 @@ import { ref } from "vue"
 export default {
   name: "Header",
   setup() {
-    function jump() {
-      let searchval = document.getElementById('search').value;
-      if(searchval !== '')
-        window.open('https://www.google.com/search?q='+searchval);
-    }
     let show = ref(false)
 
-    function say() {
-      console.log("Hello")
+    function jump() {
+      let searchEl = document.getElementById('search');
+      if(searchEl.value !== '')  window.open('https://www.google.com/search?q='+searchEl.value);
+      searchEl.value = ''
     }
-    return { jump, say, show }
+
+    return { show, jump }
   }
 }
 </script>
@@ -119,6 +116,9 @@ export default {
 .search {
   position: relative;
   right: calc(22px + 20px);
+}
+.search:hover {
+  cursor: pointer;
 }
 .user-wrapper {
   width: 40px;

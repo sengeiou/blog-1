@@ -35,10 +35,6 @@ const routes = [
                 component: Map
             },
             {
-                path: 'demo',
-                redirect: 'projects',
-            },
-            {
                 path: 'setting',
                 component: Setting
             }
