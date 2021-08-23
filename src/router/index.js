@@ -4,7 +4,7 @@ import Home from "../components/home/Home";
 
 // navbar
 import SiteMap from "../components/navbar/SiteMap";
-import Map from "../components/navbar/Map";
+import Pi from "../components/navbar/Pi";
 import Setting from "../components/navbar/Setting";
 
 // gitbook
@@ -31,8 +31,8 @@ const routes = [
                 component: SiteMap
             },
             {
-                path: 'map',
-                component: Map
+                path: 'pi',
+                component: Pi
             },
             {
                 path: 'setting',

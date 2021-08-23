@@ -3,7 +3,11 @@
     <m-navbar></m-navbar>
     <div class="content">
       <m-header></m-header>
-      <router-view class="flex-item"></router-view>
+      <router-view v-slot="{ Component }">
+        <keep-alive>
+          <component :is="Component" ></component>
+        </keep-alive>
+      </router-view>
     </div>
   </div>
 </template>
@@ -30,11 +34,5 @@ export default {
   flex-direction: column;
   flex-grow: 1;
   height: 100vh;
-}
-.flex-item {
-  height: 100%;
-  width: 100%;
-  overflow: scroll;
-  padding: 20px 0px 0px 20px;
 }
 </style>

@@ -11,9 +11,9 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/map">
-          <div class="icon"><font-awesome-icon icon="sitemap" /></div>
-          <div class="text">Map</div>
+        <router-link to="/pi">
+          <div class="icon"><font-awesome-icon icon="poll" /></div>
+          <div class="text">Pi</div>
         </router-link>
       </li>
       <li>
@@ -71,8 +71,12 @@ ul {
   display: inline-block;
   width: 50px;
   text-align: center;
+  font-size: 19px;
+  line-height: 19px;
+  vertical-align: middle;
 }
 .text {
   display: inline-block;
+  vertical-align: middle;
 }
 </style>

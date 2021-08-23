@@ -30,6 +30,12 @@ export default {
 </script>
 
 <style scoped>
+.site {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  padding: 20px 0px 0px 20px;
+}
 a {
   text-decoration: none;
   display: inline-block;
