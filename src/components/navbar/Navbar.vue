@@ -17,6 +17,12 @@
         </router-link>
       </li>
       <li>
+        <router-link to="/sola">
+          <div class="icon"><font-awesome-icon icon="cloud-sun-rain" /></div>
+          <div class="text">Sola</div>
+        </router-link>
+      </li>
+      <li>
         <router-link to="/setting">
           <div class="icon"><font-awesome-icon icon="cog" /></div>
           <div class="text">Setting</div>

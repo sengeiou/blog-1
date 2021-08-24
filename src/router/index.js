@@ -5,6 +5,7 @@ import Home from "../components/home/Home";
 // navbar
 import SiteMap from "../components/navbar/SiteMap";
 import Pi from "../components/navbar/Pi";
+import Weather from "@/components/navbar/Weather";
 import Setting from "../components/navbar/Setting";
 
 // gitbook
@@ -33,6 +34,10 @@ const routes = [
             {
                 path: 'pi',
                 component: Pi
+            },
+            {
+                path: 'sola',
+                component: Weather
             },
             {
                 path: 'setting',

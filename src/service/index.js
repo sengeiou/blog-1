@@ -1,5 +1,5 @@
-const BaseURL = "http://192.168.0.33"
-//const BaseURL = "http://423516z6x1.vicp.fun"
+//const BaseURL = "http://192.168.0.33"
+const BaseURL = "http://423516z6x1.vicp.fun"
 
 const option = {
     method: "get",
