@@ -5,10 +5,10 @@ import App from './App.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {faUser,faSearch,faGripHorizontal,faPoll,faCog,faCloudSunRain,
-    faTasks,faCommentDots,} from '@fortawesome/free-solid-svg-icons'
+    faTasks,faCommentDots,faMapMarkerAlt,faExchangeAlt} from '@fortawesome/free-solid-svg-icons'
 
 library.add(faUser,faSearch,faGripHorizontal,faPoll,faCog,faCloudSunRain,
-     faTasks,faCommentDots,)
+     faTasks,faCommentDots,faMapMarkerAlt,faExchangeAlt)
 
 //Vue Router
 import router from './router'
