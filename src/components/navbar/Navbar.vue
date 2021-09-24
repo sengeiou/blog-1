@@ -55,6 +55,7 @@ export default {
   font-weight: bold;
   padding: 40px 0px 40px 0px;
   color: rgb(29, 129, 226);
+  user-select: none;
 }
 ul {
   text-align: left;

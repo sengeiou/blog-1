@@ -35,6 +35,9 @@ export default {
       location: [],
       city: '',
       id: '',
+      amapKey: 'dd147bbfd943c2665c54ca41d85c8790',
+      heKeyDev: 'ef3821d028324e1f9abaac98b15a2a5c',
+      heKeyBus: '20c776c2751049feb5b37e555c1ac2d4',
     }
   },
   mounted() {
@@ -42,12 +45,12 @@ export default {
   },
   methods: {
     async getLocation() {
-      await fetch("https://restapi.amap.com/v3/ip?output=json&key=969cfffd79d5549adf4857e979250603")
+      await fetch("https://restapi.amap.com/v3/ip?output=json&key=" + this.amapKey)
       .then(res => { return res.json() })
       .then(res => { this.searchCity(res.city) })
     },
     async searchCity(city) {
-      await fetch("https://geoapi.qweather.com/v2/city/lookup?key=72ba3b3159c242bebda9080a818e87de&location="+city)
+      await fetch("https://geoapi.qweather.com/v2/city/lookup?key=" + this.heKeyDev + "&location="+city)
       .then(res => { return res.json() })
       .then(res => {
         this.id = res.location[0].id
@@ -56,7 +59,7 @@ export default {
       this.getWeather(this.id)
     },
     async getWeather(id) {
-      await fetch("https://api.qweather.com/v7/weather/7d?location=" + id + "&key=2c1b404e823a419aa4901647a34a4c26")
+      await fetch("https://api.qweather.com/v7/weather/7d?location=" + id + "&key=" + this.heKeyBus)
           .then(res => { return res.json()})
           .then(res => { this.weather = res.daily })
       this.weather.forEach(day => {
@@ -69,7 +72,7 @@ export default {
     async search() {
       const value = this.$refs.search.value
       if (value == '') { this.success = false; return }
-      await fetch("https://geoapi.qweather.com/v2/city/lookup?location="+value+"&key=72ba3b3159c242bebda9080a818e87de")
+      await fetch("https://geoapi.qweather.com/v2/city/lookup?location="+value+"&key=" + this.heKeyDev)
       .then(res => { return res.json() })
       .then(res => {
         if (res.code == 200) {

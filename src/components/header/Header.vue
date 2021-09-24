@@ -18,15 +18,15 @@
       <div class="icon user" @click="show = !show">
         <div class="user-wrapper">
           <font-awesome-icon icon="user"/>
-          <div class="user-info" v-if="show">
-            <div class="user-info-text">个人简介</div>
-            <div class="user-info-text">更多信息</div>
-            <div class="user-info-text">设置</div>
-            <div class="user-info-text">关于</div>
-          </div>
         </div>
       </div>
-
+    </div>
+    <div class="user-container" v-if="show" @click="show = !show">
+      <div class="user-info">
+        <div class="user-info-title">Contact Me @</div>
+        <div class="user-info-text">Email: wuchi57@outlook.com</div>
+        <div class="user-info-bg"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -136,21 +136,42 @@ export default {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
   margin: 0px 30px;
 }
-.user-info {
+
+
+/* 个人信息展示 */
+.user-container {
   position: absolute;
-  width: calc(156px + 30px);
-  height: calc(208px + 45px);
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 18px 3px 18px 18px;
-  right: 40px;
-  top: 45px;
-  z-index: 10;
-  padding: 30px;
+  top: 0;
+  transform: translateX(-200px);
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(30px);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.user-info {
   text-align: center;
 }
-.user-info-text {
+.user-info-title {
   font-size: 20px;
   margin-bottom: 20px;
+}
+.user-info-text {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.user-info-bg {
+  width: 230px;
+  height: 300px;
+  background: url("../../assets/join.jpg");
+  background-size: contain;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 0 auto;
 }
 </style>
