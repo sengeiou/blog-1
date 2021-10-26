@@ -13,18 +13,56 @@
         </router-link>
       </li>
     </ul>
+
+    <ol class="website-ol">
+      <li class="website-li" v-for="(item, index) in website" :key="index">
+        <a :href="item.url">
+          <img class="website-img red" :src="item.imgUrl"/>
+          <p class="website-p">{{item.title}}</p>
+        </a>
+      </li>
+    </ol>
+
   </div>
 </template>
 
 <script>
 import { ref } from "vue"
+import globe from "../../assets/globe@3x.png"
+
 export default {
   name: "SiteMap",
   setup() {
     const RouterLink = ref(['regex', 'git', 'html', 'javascript', 'linux', 'mysql', 'notebook', 'php', 'projects', 'vue'])
     const https = ref(['regex', 'git', 'html-css', 'javascript', 'linux', 'mysql', 'notebook', 'php', 'projects', 'vue'])
     const texts = ref(['正则表达式', 'Git', 'HTML/CSS', 'JavaScript', 'Linux', 'Database', 'NoteBook', 'PHP', 'Projects', 'Vue'])
-    return {https, texts, RouterLink}
+    const website = ref([
+      {
+        title:'Google',
+        url:'https://www.google.com.hk/',
+        imgUrl:'https://www.google.com.hk/images/branding/googleg/1x/googleg_standard_color_128dp.png'},
+      {
+        title:'哔哩哔哩',
+        url:'https://www.bilibili.com/',
+        imgUrl:'https://www.bilibili.com/favicon.ico?v=1'},
+      {
+        title:'Github',
+        url:'https://github.com/',
+        imgUrl:'https://github.githubassets.com/favicons/favicon.svg'},
+      {
+        title:'Gitbook',
+        url:'https://app.gitbook.com/@wuchi/spaces',
+        imgUrl:'https://app.gitbook.com/public/images/icon-512.png?v=10.0.14-66d1e0fff989a0d6c8ed2bbe69d58a7c89148ad4-1373229530'},
+      {
+        title:'blog',
+        url:'https://ichwu.onrender.com/',
+        imgUrl:'https://ichwu.onrender.com/blog.png'},
+      {
+        title:'wiki',
+        url:'http://localhost/wiki/index.php/%E9%A6%96%E9%A1%B5',
+        imgUrl:globe }
+    ])
+    return {https, texts, RouterLink, website}
   }
 }
 </script>
@@ -36,7 +74,7 @@ export default {
   overflow: scroll;
   padding: 20px 0px 0px 20px;
 }
-a {
+ul a {
   text-decoration: none;
   display: inline-block;
   border-radius: 3px;
@@ -46,7 +84,7 @@ a {
   background-color: rgb(47, 69, 102);
   color: rgb(255, 255, 255);
 }
-a:hover {
+ul a:hover {
   background-color: rgb(89, 109, 139);
 }
 ul {
@@ -108,4 +146,23 @@ ul {
 .container-projects { background-color: rgb(164, 78, 237); }
 .container-vue { background-color: rgb(56, 132, 255); }
 
+.website-ol {
+  list-style: none;
+  margin: 30px 15px;
+}
+.website-li {
+  margin: 8px 0px;
+}
+.website-img {
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+}
+.website-p {
+  display: inline-block;
+  vertical-align: middle;
+  color: rgb(58,58,58);
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
 </style>
